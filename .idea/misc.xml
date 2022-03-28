@@ -23,8 +23,15 @@
         <entry key="..\:/ProyectosAndroid/YoTeAyudo/app/src/main/res/layout/nav_header_main.xml" value="0.371875" />
         <entry key="..\:/ProyectosAndroid/YoTeAyudo/app/src/main/res/menu/activity_main_drawer.xml" value="0.371875" />
         <entry key="..\:/ProyectosAndroid/YoTeAyudo/app/src/main/res/menu/main.xml" value="0.371875" />
+        <entry key="..\:/UPC/desarrollo para plataformas moviles/yoTeAyudo app/app/src/main/res/drawable/ic_next.xml" value="0.159" />
+        <entry key="..\:/UPC/desarrollo para plataformas moviles/yoTeAyudo app/app/src/main/res/layout/activity_buscar_comparar.xml" value="0.371875" />
         <entry key="..\:/UPC/desarrollo para plataformas moviles/yoTeAyudo app/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/UPC/desarrollo para plataformas moviles/yoTeAyudo app/app/src/main/res/layout/activity_main.xml" value="0.22083333333333333" />
+        <entry key="..\:/UPC/desarrollo para plataformas moviles/yoTeAyudo app/app/src/main/res/layout/fragment_buscarcomparar.xml" value="0.371875" />
+        <entry key="..\:/UPC/desarrollo para plataformas moviles/yoTeAyudo app/app/src/main/res/layout/fragment_cupon.xml" value="0.371875" />
+        <entry key="..\:/UPC/desarrollo para plataformas moviles/yoTeAyudo app/app/src/main/res/layout/fragment_productos.xml" value="0.33" />
+        <entry key="..\:/UPC/desarrollo para plataformas moviles/yoTeAyudo app/app/src/main/res/layout/fragment_tiendas.xml" value="0.33" />
+        <entry key="..\:/UPC/desarrollo para plataformas moviles/yoTeAyudo app/app/src/main/res/layout/rec_single_item_view.xml" value="0.5" />
       </map>
     </option>
   </component>

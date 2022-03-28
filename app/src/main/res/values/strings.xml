@@ -6,11 +6,16 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="text_email">Correo electrónico</string>
+    <string name="text_username">Nombre y apellido</string>
 
     <string name="menu_perfil">Ver perfil</string>
     <string name="menu_buscarcomparar">Buscar y comparar</string>
     <string name="menu_cupon">Generar cupón</string>
     <string name="menu_favoritos">Lista de favoritos</string>
     <string name="menu_compartir">Compartir</string>
+    <string name="menu_detalletienda">Detalle de Tienda</string>
     <string name="menu_cerrarsesion">Cerrar sesión</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

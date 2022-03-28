@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_perfil">
+    app:startDestination="@id/nav_detalletienda">
 
     <fragment
         android:id="@+id/nav_perfil"
@@ -34,4 +34,12 @@
         android:name="com.yoteayudo.yoteayudo.ui.CompartirFragment"
         android:label="@string/menu_compartir"
         tools:layout="@layout/fragment_compartir" />
+
+
+    <fragment
+        android:id="@+id/nav_detalletienda"
+        android:name="com.yoteayudo.yoteayudo.ui.DetalleTiendaFragment"
+        android:label="@string/menu_detalletienda"
+        tools:layout="@layout/fragment_detalle_tienda" />
+
 </navigation>

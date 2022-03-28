@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/ic_usuario"
+            android:title="@string/menu_perfil" />
+        <item
+            android:id="@+id/nav_buscarcomparar"
+            android:icon="@drawable/ic_lupa"
+            android:title="@string/menu_buscarcomparar" />
+        <item
+            android:id="@+id/nav_cupon"
+            android:icon="@drawable/ic_baseline_local_offer_24"
+            android:title="@string/menu_cupon" />
+        <item
+            android:id="@+id/nav_favoritos"
+            android:icon="@drawable/ic_corazon"
+            android:title="@string/menu_favoritos"/>
+        <item
+            android:id="@+id/nav_compartir"
+            android:icon="@drawable/ic_compartir"
+            android:title="@string/menu_compartir" />
+
+        <item
+            android:id="@+id/nav_cerrarsesion"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/menu_cerrarsesion"
+            />
+    </group>
+</menu>

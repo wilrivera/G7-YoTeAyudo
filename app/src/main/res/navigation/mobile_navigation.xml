@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_perfil">
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.yoteayudo.yoteayudo.ui.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/fragment_perfil" />
+
+    <activity
+        android:id="@+id/nav_buscarcomparar"
+        android:name="com.yoteayudo.yoteayudo.BuscarCompararActivity"
+        android:label="@string/menu_buscarcomparar"
+        tools:layout="@layout/activity_buscar_comparar" />
+
+    <fragment
+        android:id="@+id/nav_cupon"
+        android:name="com.yoteayudo.yoteayudo.ui.CuponFragment"
+        android:label="@string/menu_cupon"
+        tools:layout="@layout/fragment_cupon" />
+
+    <fragment
+        android:id="@+id/nav_favoritos"
+        android:name="com.yoteayudo.yoteayudo.ui.FavoritosFragment"
+        android:label="@string/menu_favoritos"
+        tools:layout="@layout/fragment_favoritos" />
+
+    <fragment
+        android:id="@+id/nav_compartir"
+        android:name="com.yoteayudo.yoteayudo.ui.CompartirFragment"
+        android:label="@string/menu_compartir"
+        tools:layout="@layout/fragment_compartir" />
+</navigation>

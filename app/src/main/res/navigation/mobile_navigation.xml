@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_detalletienda">
+    app:startDestination="@id/nav_buscarcomparar">
 
     <fragment
         android:id="@+id/nav_perfil"
@@ -11,11 +11,11 @@
         android:label="@string/menu_perfil"
         tools:layout="@layout/fragment_perfil" />
 
-    <activity
+    <!--<activity
         android:id="@+id/nav_buscarcomparar"
         android:name="com.yoteayudo.yoteayudo.BuscarCompararActivity"
         android:label="@string/menu_buscarcomparar"
-        tools:layout="@layout/activity_buscar_comparar" />
+        tools:layout="@layout/activity_buscar_comparar" />-->
 
     <fragment
         android:id="@+id/nav_cupon"
@@ -41,5 +41,11 @@
         android:name="com.yoteayudo.yoteayudo.ui.DetalleTiendaFragment"
         android:label="@string/menu_detalletienda"
         tools:layout="@layout/fragment_detalle_tienda" />
+
+    <fragment
+        android:id="@+id/nav_buscarcomparar"
+        android:name="com.yoteayudo.yoteayudo.BuscarCompararFragment"
+        android:label="@string/menu_buscarcomparar"
+        tools:layout="@layout/fragment_buscarcomparar" />
 
 </navigation>

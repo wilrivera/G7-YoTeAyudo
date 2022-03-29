@@ -115,4 +115,13 @@
         android:text="Crear Cuenta"
         />
 
+    <Button
+        android:id="@+id/btnAutenticar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="¿Ya tienes una cuenta? Identifícate"
+        android:onClick="IrLogin"
+        />
+
 </LinearLayout>

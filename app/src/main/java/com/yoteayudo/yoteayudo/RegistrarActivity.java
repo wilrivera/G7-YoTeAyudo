@@ -13,5 +13,10 @@ public class RegistrarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setTitle("Registrar Cuenta");
         setContentView(R.layout.activity_registrar);
+        getSupportActionBar().hide();
+    }
+
+    public void IrLogin (View v){
+        startActivity(new Intent(this, LoginActivity.class));
     }
 }

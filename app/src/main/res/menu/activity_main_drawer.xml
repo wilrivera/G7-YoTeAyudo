@@ -12,7 +12,8 @@
         <item
             android:id="@+id/nav_buscarcomparar"
             android:icon="@drawable/ic_lupa"
-            android:title="@string/menu_buscarcomparar" />
+            android:title="@string/menu_buscarcomparar"
+            />
         <item
             android:id="@+id/nav_cupon"
             android:icon="@drawable/ic_baseline_local_offer_24"

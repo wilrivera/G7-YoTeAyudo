@@ -44,7 +44,7 @@
 
     <fragment
         android:id="@+id/nav_buscarcomparar"
-        android:name="com.yoteayudo.yoteayudo.BuscarCompararFragment"
+        android:name="com.yoteayudo.yoteayudo.ui.BuscarCompararFragment"
         android:label="@string/menu_buscarcomparar"
         tools:layout="@layout/fragment_buscarcomparar" />
 

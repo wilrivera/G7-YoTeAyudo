@@ -1,4 +1,4 @@
-package com.yoteayudo.yoteayudo;
+package com.yoteayudo.yoteayudo.ui;
 
 import android.os.Bundle;
 
@@ -10,13 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.yoteayudo.yoteayudo.MyAdapter;
+import com.yoteayudo.yoteayudo.MyModel;
+import com.yoteayudo.yoteayudo.R;
+
 import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TiendasFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class TiendasFragment extends Fragment {
 
     @Override

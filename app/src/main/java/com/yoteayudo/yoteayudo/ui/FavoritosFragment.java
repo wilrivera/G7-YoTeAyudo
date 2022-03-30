@@ -6,13 +6,35 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.yoteayudo.yoteayudo.MyAdapter2;
+import com.yoteayudo.yoteayudo.MyModel2;
 import com.yoteayudo.yoteayudo.R;
+
+import java.util.ArrayList;
 
 public class FavoritosFragment extends Fragment {
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_favoritos, container, false);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_favoritos, container, false);
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+
+        LinearLayoutManager lmg = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL, false);
+        recyclerView.setLayoutManager(lmg);
+        ArrayList<MyModel2> models = new ArrayList<>();{
+            models.add(new MyModel2("Teclado 1","$100 "));
+            models.add(new MyModel2("Procesador i7","$340 "));
+            models.add(new MyModel2("Case FD","$87 "));
+        }
+
+        MyAdapter2 myAdapter2 = new MyAdapter2(models);
+        recyclerView.setAdapter(myAdapter2);
+        return view;
+
     }
 }

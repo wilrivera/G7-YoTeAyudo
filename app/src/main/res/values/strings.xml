@@ -9,8 +9,9 @@
     <string name="text_email">Correo electrónico</string>
     <string name="text_username">Nombre y apellido</string>
 
-    <string name="menu_perfil">Ver perfil</string>
+    <string name="menu_perfil">Perfil de Usuario</string>
     <string name="menu_buscarcomparar">Buscar y comparar</string>
+    <string name="menu_comparar">Comparar Precios</string>
     <string name="menu_cupon">Generar cupón</string>
     <string name="menu_favoritos">Lista de favoritos</string>
     <string name="menu_compartir">Compartir</string>

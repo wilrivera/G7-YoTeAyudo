@@ -29,7 +29,7 @@ public class BuscarCompararFragment extends Fragment {
         viewPager = view.findViewById(R.id.viewpager);
 
         tabLayout.setupWithViewPager(viewPager);
-        ViewPageAdapter vpAdapter = new ViewPageAdapter(getParentFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        ViewPageAdapter vpAdapter = new ViewPageAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpAdapter.addFragment(new ProductosFragment(), "productos");
         vpAdapter.addFragment(new TiendasFragment(), "Tiendas");
         viewPager.setAdapter(vpAdapter);

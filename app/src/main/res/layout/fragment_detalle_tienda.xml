@@ -11,77 +11,117 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="202dp"
-        android:layout_height="144dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="36dp"
-        android:src="@drawable/ic_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="230dp"
+        android:src="@drawable/tienda"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tienda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="60dp"
+        android:id="@+id/txtNombreTienda"
+        android:layout_width="335dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/varela_round"
         android:text="Tienda1"
-        android:textSize="45dp"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <TextView
-        android:id="@+id/telefono"
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
-        android:drawableLeft="@drawable/ic_phone"
-        android:drawablePadding="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@android:drawable/stat_sys_phone_call"
+        app:tint="#4A4A4A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreTienda" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_ubicacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_reloj"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_web"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+    <TextView
+        android:id="@+id/txtTelefono"
+        android:layout_width="297dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="33dp"
         android:fontFamily="@font/varela_round"
         android:text="015456060"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tienda" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreTienda" />
 
     <TextView
-        android:id="@+id/direccion"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtHorario"
+        android:layout_width="297dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        android:drawableLeft="@drawable/ic_ubicacion"
-        android:drawablePadding="10dp"
-        android:text="Av. 123 Lima (Ver mapa)"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/telefono" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="34dp"
+        android:fontFamily="@font/varela_round"
+        android:text="9:00am - 8pm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.003"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toBottomOf="@+id/txtDireccion" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtDireccion"
+        android:layout_width="297dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        android:drawableLeft="@drawable/ic_reloj"
-        android:drawablePadding="10dp"
-        android:text="8:30 am - 8:00 pm"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/direccion" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="33dp"
+        android:fontFamily="@font/varela_round"
+        android:text="av. 123 (ver en mapa)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefono" />
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtWeb"
+        android:layout_width="297dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="28dp"
-        android:drawableLeft="@drawable/ic_web"
-        android:drawablePadding="10dp"
-        android:text="www.tienda1.com.pe"
-        android:textSize="16sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="34dp"
+        android:fontFamily="@font/varela_round"
+        android:text="www.tienda.com.pe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView11"
+        app:layout_constraintTop_toBottomOf="@+id/txtHorario" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

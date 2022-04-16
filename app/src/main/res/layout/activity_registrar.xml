@@ -38,7 +38,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/txtNombreUsuario"
+        android:id="@+id/txtSubtitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
@@ -49,7 +49,7 @@
 
     <EditText
 
-        android:id="@+id/et_rUsername"
+        android:id="@+id/etRegistrarNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -65,7 +65,7 @@
         android:textSize="16sp" />
 
     <EditText
-        android:id="@+id/et_rEmail"
+        android:id="@+id/etRegistrarCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -79,7 +79,7 @@
         android:textSize="16sp" />
 
     <EditText
-        android:id="@+id/et_rPassword"
+        android:id="@+id/etRegistrarPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -92,22 +92,8 @@
         android:padding="16dp"
         android:textSize="16sp" />
 
-    <EditText
-        android:id="@+id/et_rConfirmPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"
-        android:drawableLeft="@drawable/ic_candado"
-        android:drawablePadding="5dp"
-        android:ems="10"
-        android:hint="Confirmar contraseña"
-        android:inputType="textPassword"
-        android:padding="16dp"
-        android:textSize="16sp" />
-
     <Button
-        android:id="@+id/btnCrearCuenta"
+        android:id="@+id/btnRegistrarCrearCuenta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -116,12 +102,12 @@
         />
 
     <Button
-        android:id="@+id/btnAutenticar"
+        android:id="@+id/btnRegistrarYatienesCuenta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:text="¿Ya tienes una cuenta? Identifícate"
-        android:onClick="IrLogin"
-        />
+        android:text="¿Ya tienes una cuenta? Identifícate"/>
+        <!--android:onClick="IrLogin"
+        />-->
 
 </LinearLayout>

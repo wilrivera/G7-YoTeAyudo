@@ -51,7 +51,7 @@
         android:textStyle="italic" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/etLoginCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -63,7 +63,7 @@
         android:inputType="textEmailAddress" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/etLoginPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -75,21 +75,24 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/btnIngresar"
+        android:id="@+id/btnLoginIngresar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Ingresar"
-        android:onClick="ingresar"/>
+        android:text="Ingresar"/>
+        <!--android:onClick="ingresar"
+        />-->
 
     <Button
-        android:id="@+id/btnCrearCuenta"
+        android:id="@+id/btnLoginCrearCuenta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Crear cuenta"
-        android:onClick="registrar"/>
+        android:text="Crear cuenta"/><!--
+        android:onClick="registrar"
+
+        />-->
 
 </LinearLayout>

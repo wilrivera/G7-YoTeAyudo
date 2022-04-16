@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "749378139059",
+    "project_id": "yoteayudo-759d8",
+    "storage_bucket": "yoteayudo-759d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:749378139059:android:7e3e65b6f593337238d1c6",
+        "android_client_info": {
+          "package_name": "com.yoteayudo.yoteayudo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "749378139059-hm8255mbn8r19tbt8vo8hrrb6a1pg86f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4x5_7eSHu2PtKt3z5sSWgdZLG8UW_ldw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "749378139059-hm8255mbn8r19tbt8vo8hrrb6a1pg86f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -2,6 +2,8 @@ package com.yoteayudo.yoteayudo.ui;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +19,6 @@ import com.yoteayudo.yoteayudo.MyModel;
 import com.yoteayudo.yoteayudo.R;
 
 import java.util.ArrayList;
-
 
 public class TiendasFragment extends Fragment {
 
@@ -48,6 +49,10 @@ public class TiendasFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+
+        //((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Tiendas");
+
     }
 
     @Override
@@ -57,6 +62,10 @@ public class TiendasFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_tiendas, container, false);
         recview = view.findViewById(R.id.recyclerTiendas);
         recview.setLayoutManager(new LinearLayoutManager(getContext()));
+        /*Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
+        if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Tiendas");
+        }*/
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()

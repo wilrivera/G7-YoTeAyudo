@@ -15,10 +15,10 @@
             android:id="@+id/nav_buscarcomparar"
             android:icon="@drawable/ic_lupa"
             android:title="@string/menu_buscarcomparar" />
-        <item
+        <!--<item
             android:id="@+id/nav_comparar"
             android:icon="@drawable/ic_menu_comparar"
-            android:title="@string/menu_comparar" />
+            android:title="@string/menu_comparar" />-->
         <item
             android:id="@+id/nav_cupon"
             android:icon="@drawable/ic_baseline_local_offer_24"

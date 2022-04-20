@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
@@ -41,6 +43,13 @@ import com.yoteayudo.yoteayudo.R;
 import java.io.ByteArrayOutputStream;
 
 public class PerfilFragment extends Fragment {
+
+    private static final String ARG_PARAM1 = "param1";
+    private static final String ARG_PARAM2 = "param2";
+
+    private String mParam1;
+    private String mParam2;
+
     TextView txtNombreUsuario, txtCorreo, txtSubirFoto;
     ProgressBar progressBarPerfil;
     ImageView imgFotoPerfil;
@@ -52,8 +61,37 @@ public class PerfilFragment extends Fragment {
 
     int TAKE_IMAGE_CODE = 100001;
 
+    public static PerfilFragment newInstance(String param1, String param2) {
+        PerfilFragment fragment = new PerfilFragment();
+        Bundle args = new Bundle();
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
+        }
+        View view = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_perfil, null);
+
+        //((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("sdasd");
+        Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
+        if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("perfil de usuario");
+        }
+
+    }
+
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
+
         View view = inflater.inflate(R.layout.fragment_perfil, container, false);
 
         txtNombreUsuario = view.findViewById(R.id.txtNombreUsuario);
@@ -61,6 +99,10 @@ public class PerfilFragment extends Fragment {
         txtCorreo = view.findViewById(R.id.txtCorreo);
         progressBarPerfil = view.findViewById(R.id.progressBarPerfil);
         imgFotoPerfil = view.findViewById(R.id.imgFotoPerfil);
+        Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
+        if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Perfil de usuario");
+        }
 
         mAuth = FirebaseAuth.getInstance();
         mUser = mAuth.getCurrentUser();
@@ -175,7 +217,7 @@ public class PerfilFragment extends Fragment {
                     @Override
                     public void onSuccess(Void unused) {
                         Snackbar.make(getView().findViewById(R.id.frame), "Actualizaste tu foto de perfil", Snackbar.LENGTH_SHORT).show();
-                        /*Toast.makeText(getActivity(), "Actualizaste tu foto de perfil", Toast.LENGTH_SHORT).show();*/
+                        Toast.makeText(getActivity(), "Actualizaste tu foto de perfil", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

@@ -1,6 +1,5 @@
 package com.yoteayudo.yoteayudo.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import com.yoteayudo.yoteayudo.MyAdapter;
 import com.yoteayudo.yoteayudo.MyModel;
 import com.yoteayudo.yoteayudo.R;
-import com.yoteayudo.yoteayudo.RegistrarActivity;
 
 import java.util.ArrayList;
 
@@ -29,7 +27,7 @@ public class ProductosFragment extends Fragment {
         // Inflate the layout for this fragment
         //return inflater.inflate(R.layout.fragment_productos, container, false);
         View view = inflater.inflate(R.layout.fragment_productos, container, false);
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerTiendas);
 
         LinearLayoutManager lmg = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(lmg);

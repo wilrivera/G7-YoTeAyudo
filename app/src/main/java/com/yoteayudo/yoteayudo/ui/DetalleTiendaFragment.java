@@ -7,38 +7,46 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.yoteayudo.yoteayudo.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DetalleTiendaFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class DetalleTiendaFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
+    String nombre, direccion, horaFin, horaInicio, web, imgTienda, logo;
+    Double latitud, longitud;
+    Integer telefono;
+
     public DetalleTiendaFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment DetalleTienda.
-     */
-    // TODO: Rename and change types and number of parameters
+    public DetalleTiendaFragment(String nombre, String direccion, String horaFin, String horaInicio,
+                        String web, Double latitud, Double longitud, Integer telefono,
+                        String imgTienda, String logo) {
+
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.horaFin = horaFin;
+        this.horaInicio = horaInicio;
+        this.web = web;
+        this.imgTienda = imgTienda;
+        this.logo = logo;
+        this.latitud = latitud;
+        this.longitud = longitud;
+        this.telefono = telefono;
+
+
+    }
+
     public static DetalleTiendaFragment newInstance(String param1, String param2) {
         DetalleTiendaFragment fragment = new DetalleTiendaFragment();
         Bundle args = new Bundle();
@@ -60,7 +68,28 @@ public class DetalleTiendaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_detalle_tienda, container, false);
+        View view = inflater.inflate(R.layout.fragment_detalle_tienda, container, false);
+
+        ImageView imgDetalleTienda = view.findViewById(R.id.imgDetalleTienda);
+        ImageView imgDetalleLogo = view.findViewById(R.id.imgDetalleLogo);
+        TextView txtTelefono = view.findViewById(R.id.txtDetalleTelefono);
+        TextView txtDireccion = view.findViewById(R.id.txtDetalleDireccion);
+        TextView txtDetalleHoraInicio = view.findViewById(R.id.txtDetalleHorario);
+        TextView txtWeb = view.findViewById(R.id.txtDetalleWeb);
+        TextView txtDetalleLatitud = view.findViewById(R.id.txtDetalleLatitud);
+        TextView txtDetalleLongitud = view.findViewById(R.id.txtDetalleLongitud);
+        TextView txtNombreTienda = view.findViewById(R.id.txtDetalleNombre);
+
+        Glide.with(getContext()).load(imgTienda).into(imgDetalleTienda);
+        Glide.with(getContext()).load(logo).into(imgDetalleLogo);
+        txtTelefono.setText(String.valueOf(telefono));
+        txtDireccion.setText(direccion + " (ver en mapa)");
+        txtDetalleHoraInicio.setText(horaInicio + " - " + horaFin);
+        txtWeb.setText(web);
+        txtDetalleLatitud.setText(String.valueOf(latitud));
+        txtDetalleLongitud.setText(String.valueOf(longitud));
+        txtNombreTienda.setText(nombre);
+
+        return view;
     }
 }

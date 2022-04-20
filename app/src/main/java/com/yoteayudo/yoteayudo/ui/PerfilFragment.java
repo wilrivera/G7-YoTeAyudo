@@ -161,7 +161,7 @@ public class PerfilFragment extends Fragment {
     }
     private void handleUpload(Bitmap bitmap) {
         final ProgressDialog pd = new ProgressDialog(getContext());
-        pd.setTitle("Uploadgin Image");
+        pd.setTitle("Guardando imagen");
         pd.show();
 
 
@@ -191,7 +191,7 @@ public class PerfilFragment extends Fragment {
             @Override
             public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
                 double progressPercent = (100.00 * snapshot.getBytesTransferred() / snapshot.getTotalByteCount());
-                pd.setMessage("percentage: " + (int) progressPercent + "%");
+                pd.setMessage("Porcentaje: " + (int) progressPercent + "%");
             }
         });
     }
@@ -217,7 +217,7 @@ public class PerfilFragment extends Fragment {
                     @Override
                     public void onSuccess(Void unused) {
                         Snackbar.make(getView().findViewById(R.id.frame), "Actualizaste tu foto de perfil", Snackbar.LENGTH_SHORT).show();
-                        Toast.makeText(getActivity(), "Actualizaste tu foto de perfil", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(getActivity(), "Actualizaste tu foto de perfil", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

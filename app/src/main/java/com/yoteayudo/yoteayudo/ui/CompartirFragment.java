@@ -49,7 +49,7 @@ public class CompartirFragment extends Fragment {
             i.putExtra(Intent.EXTRA_SUBJECT, getResources().getString(R.string.app_name));
             String aux = "Descarga nuestra app\n";
             //aux = aux + "https://play.google.com/store/apps/de..."+getBaseContext().getPackageName();
-            aux = aux + "https://www.techdha.com";
+            aux = aux + "https://www.yoteayudoapp.com";
             i.putExtra(Intent.EXTRA_TEXT, aux);
             startActivity(i);
         }catch (Exception e) {

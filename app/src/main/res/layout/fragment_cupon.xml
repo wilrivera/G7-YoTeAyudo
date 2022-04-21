@@ -21,31 +21,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txtCupon"
-        android:layout_width="397dp"
-        android:layout_height="81dp"
-        android:layout_marginTop="32dp"
+    <EditText
+        android:id="@+id/edt_Questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="45dp"
         android:ems="10"
-        android:fontFamily="@font/varela_round"
         android:inputType="textPersonName"
-        android:text="2022"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@color/purple_200"
-        android:textSize="60dp"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_Generate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
+    <Button
+        android:id="@+id/btn_Generate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Generar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_Questions" />
+
     <TextView
-        android:id="@+id/txtCorreo"
+        android:id="@+id/textView4"
         android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/varela_round"
-        android:text="Usalo en las tiendas afiliadas a nuestra App y obtén descuentos en tus compras"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Úsalo en las tiendas afiliadas a nuestra App y obtén descuentos en tus compras."
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.531"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCupon" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_Generate" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

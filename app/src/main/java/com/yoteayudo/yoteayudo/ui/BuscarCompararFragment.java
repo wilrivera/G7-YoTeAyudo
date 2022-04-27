@@ -23,7 +23,7 @@ public class BuscarCompararFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
+        /*if (getArguments() != null) {
         }
 
         View view = LayoutInflater.from(requireContext()).inflate(R.layout.fragment_buscarcomparar, null);
@@ -31,13 +31,12 @@ public class BuscarCompararFragment extends Fragment {
         Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
         if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){
             ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Buscar");
-        }
+        }*/
 
 
         //((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Tiendas");
 
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,16 +47,16 @@ public class BuscarCompararFragment extends Fragment {
         tabLayout = view.findViewById(R.id.tabLayout);
         viewPager = view.findViewById(R.id.viewpager);
 
-        Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
-        if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){
-            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Buscar y comparar");
-        }
-
         tabLayout.setupWithViewPager(viewPager);
         ViewPageAdapter vpAdapter = new ViewPageAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpAdapter.addFragment(new ProductosFragment(), "productos");
         vpAdapter.addFragment(new TiendasFragment(), "Tiendas");
         viewPager.setAdapter(vpAdapter);
+
+        Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
+        if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){
+            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Buscar y comparar");
+        }
 
         return view;
     }

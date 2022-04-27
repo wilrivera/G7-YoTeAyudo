@@ -124,7 +124,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView11"
         app:layout_constraintTop_toTopOf="@+id/imageView11" />
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/imgDetalleLogo"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -150,6 +150,6 @@
         android:text="TextView"
         android:visibility="gone"
         app:layout_constraintTop_toTopOf="@+id/imgDetalleLogo"
-        tools:layout_editor_absoluteX="200dp" />
+        tools:layout_editor_absoluteX="200dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

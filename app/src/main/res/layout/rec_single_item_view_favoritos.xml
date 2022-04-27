@@ -19,7 +19,7 @@
         android:text="Nombre de Producto"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/imgTacho"
+        app:layout_constraintEnd_toStartOf="@+id/btnIrDetalle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,13 +39,13 @@
         android:layout_height="21dp"
         android:layout_marginEnd="4dp"
         android:text="$$$"
-        app:layout_constraintEnd_toStartOf="@+id/imgTacho"
+        app:layout_constraintEnd_toStartOf="@+id/btnIrDetalle"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/txtPrecioTag"
         app:layout_constraintTop_toBottomOf="@+id/tvProductoNombre" />
 
     <ImageView
-        android:id="@+id/imgTacho"
+        android:id="@+id/btnIrDetalle"
         android:layout_width="35dp"
         android:layout_height="46dp"
         android:layout_marginEnd="16dp"

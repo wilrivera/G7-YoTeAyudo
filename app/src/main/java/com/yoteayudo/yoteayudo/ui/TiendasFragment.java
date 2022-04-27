@@ -2,8 +2,6 @@ package com.yoteayudo.yoteayudo.ui;
 
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,11 +12,7 @@ import android.view.ViewGroup;
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.FirebaseDatabase;
-import com.yoteayudo.yoteayudo.MyAdapter;
-import com.yoteayudo.yoteayudo.MyModel;
 import com.yoteayudo.yoteayudo.R;
-
-import java.util.ArrayList;
 
 public class TiendasFragment extends Fragment {
 
@@ -60,7 +54,7 @@ public class TiendasFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_tiendas, container, false);
-        recview = view.findViewById(R.id.recyclerTiendas);
+        recview = view.findViewById(R.id.recyclerResultadoProductos);
         recview.setLayoutManager(new LinearLayoutManager(getContext()));
         /*Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
         if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){

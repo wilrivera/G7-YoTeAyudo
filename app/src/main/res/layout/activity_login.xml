@@ -17,7 +17,7 @@
         android:layout_marginBottom="20dp">
 
         <ImageView
-            android:id="@+id/imgTacho"
+            android:id="@+id/btnIrDetalle"
             android:layout_width="147dp"
             android:layout_height="166dp"
             android:layout_alignParentStart="true"

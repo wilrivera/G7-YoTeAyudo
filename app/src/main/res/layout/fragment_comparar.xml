@@ -8,9 +8,10 @@
 
     <ImageView
         android:id="@+id/imgFotoPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:src="@drawable/teclado"
+        android:layout_width="0dp"
+        android:layout_height="230dp"
+        android:background="#5E5E5E"
+        android:src="@drawable/ic_producto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -24,7 +24,7 @@ public class FavoritosFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_favoritos, container, false);
-        RecyclerView recyclerView = view.findViewById(R.id.recyclerTiendas);
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerResultadoProductos);
         Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
         if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){
             ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Lista de favoritos");

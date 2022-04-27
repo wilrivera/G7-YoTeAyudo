@@ -71,23 +71,23 @@ public class DetalleTiendaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_detalle_tienda, container, false);
 
         ImageView imgDetalleTienda = view.findViewById(R.id.imgDetalleTienda);
-        ImageView imgDetalleLogo = view.findViewById(R.id.imgDetalleLogo);
+        //ImageView imgDetalleLogo = view.findViewById(R.id.imgDetalleLogo);
         TextView txtTelefono = view.findViewById(R.id.txtDetalleTelefono);
         TextView txtDireccion = view.findViewById(R.id.txtDetalleDireccion);
         TextView txtDetalleHoraInicio = view.findViewById(R.id.txtDetalleHorario);
         TextView txtWeb = view.findViewById(R.id.txtDetalleWeb);
-        TextView txtDetalleLatitud = view.findViewById(R.id.txtDetalleLatitud);
-        TextView txtDetalleLongitud = view.findViewById(R.id.txtDetalleLongitud);
+        //TextView txtDetalleLatitud = view.findViewById(R.id.txtDetalleLatitud);
+        //TextView txtDetalleLongitud = view.findViewById(R.id.txtDetalleLongitud);
         TextView txtNombreTienda = view.findViewById(R.id.txtDetalleNombre);
 
         Glide.with(getContext()).load(imgTienda).into(imgDetalleTienda);
-        Glide.with(getContext()).load(logo).into(imgDetalleLogo);
+        //Glide.with(getContext()).load(logo).into(imgDetalleLogo);
         txtTelefono.setText(String.valueOf(telefono));
         txtDireccion.setText(direccion + " (ver en mapa)");
         txtDetalleHoraInicio.setText(horaInicio + " - " + horaFin);
         txtWeb.setText(web);
-        txtDetalleLatitud.setText(String.valueOf(latitud));
-        txtDetalleLongitud.setText(String.valueOf(longitud));
+        //txtDetalleLatitud.setText(String.valueOf(latitud));
+        //txtDetalleLongitud.setText(String.valueOf(longitud));
         txtNombreTienda.setText(nombre);
 
         return view;

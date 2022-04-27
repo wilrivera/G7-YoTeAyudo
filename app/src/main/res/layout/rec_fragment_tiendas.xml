@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_next" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/txtTiendasDireccion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -124,6 +124,6 @@
         android:text="TextView"
         android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/txtTiendasNombre"
-        tools:layout_editor_absoluteX="243dp" />
+        tools:layout_editor_absoluteX="243dp" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

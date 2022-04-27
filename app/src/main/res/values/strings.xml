@@ -11,6 +11,7 @@
 
     <string name="menu_perfil">Perfil de Usuario</string>
     <string name="menu_buscarcomparar">Buscar y comparar</string>
+    <string name="menu_producto_detalle">producto detaller</string>
     <string name="menu_comparar">Comparar Precios</string>
     <string name="menu_cupon">Generar cupón</string>
     <string name="menu_favoritos">Lista de favoritos</string>

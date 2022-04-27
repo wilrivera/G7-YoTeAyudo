@@ -9,7 +9,7 @@
     tools:context=".ui.TiendasFragment">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerTiendas"
+        android:id="@+id/recyclerResultadoProductos"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"

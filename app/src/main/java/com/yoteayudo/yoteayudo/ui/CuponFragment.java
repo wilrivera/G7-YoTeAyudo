@@ -24,7 +24,7 @@ public class CuponFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_cupon, container, false);
 
         Button btn_Generate;
-        EditText edt_Questions;
+        TextView edt_Questions;
 
         Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
         if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){
@@ -32,7 +32,7 @@ public class CuponFragment extends Fragment {
         }
 
         btn_Generate=(Button) view.findViewById(R.id.btn_Generate);
-        edt_Questions= (EditText) view.findViewById(R.id.edt_Questions);
+        edt_Questions= (TextView) view.findViewById(R.id.edt_Questions);
 
         final String questions[] ={
                 "T2022-001",

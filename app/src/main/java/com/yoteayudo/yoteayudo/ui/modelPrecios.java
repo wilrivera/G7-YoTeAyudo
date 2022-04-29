@@ -1,12 +1,13 @@
 package com.yoteayudo.yoteayudo.ui;
 
 public class modelPrecios {
-    String nombre, precio;
+    String nombre;
+    Double precio;
 
     public modelPrecios() {
     }
 
-    public modelPrecios(String nombre, String precio) {
+    public modelPrecios(String nombre, Double precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
@@ -19,11 +20,11 @@ public class modelPrecios {
         this.nombre = nombre;
     }
 
-    public String getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(String precio) {
+    public void setPrecio(Double precio) {
         this.precio = precio;
     }
 }

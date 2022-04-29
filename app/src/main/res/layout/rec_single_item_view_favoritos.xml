@@ -10,7 +10,7 @@
     android:padding="8dp">
 
     <TextView
-        android:id="@+id/tvProductoNombre"
+        android:id="@+id/tvFavTipoModelo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -19,33 +19,33 @@
         android:text="Nombre de Producto"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/btnIrDetalle"
+        app:layout_constraintEnd_toStartOf="@+id/btnEliminar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <TextView
         android:id="@+id/txtPrecioTag"
-        android:layout_width="50dp"
-        android:layout_height="21dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:text="Precio:"
+        android:text="Precio: S/ "
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvProductoNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFavTipoModelo" />
 
     <TextView
         android:id="@+id/tvPrecio"
         android:layout_width="0dp"
-        android:layout_height="21dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
         android:text="$$$"
-        app:layout_constraintEnd_toStartOf="@+id/btnIrDetalle"
+        app:layout_constraintEnd_toStartOf="@+id/btnEliminar"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/txtPrecioTag"
-        app:layout_constraintTop_toBottomOf="@+id/tvProductoNombre" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFavTipoModelo" />
 
     <ImageView
-        android:id="@+id/btnIrDetalle"
+        android:id="@+id/btnEliminar"
         android:layout_width="35dp"
         android:layout_height="46dp"
         android:layout_marginEnd="16dp"

@@ -12,6 +12,9 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.yoteayudo.yoteayudo.R;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+
 public class myadapterPrecios extends FirebaseRecyclerAdapter<modelPrecios, myadapterPrecios.myviewholder> {
     public myadapterPrecios(@NonNull FirebaseRecyclerOptions<modelPrecios> options) {
         super(options);
@@ -19,9 +22,10 @@ public class myadapterPrecios extends FirebaseRecyclerAdapter<modelPrecios, myad
 
     @Override
     protected void onBindViewHolder(@NonNull myviewholder holder, int position, @NonNull modelPrecios model) {
+        NumberFormat formatter = new DecimalFormat("###,###.##");
 
         holder.txtDetalleProductoTienda.setText(model.getNombre());
-        holder.txtDetalleProductoPrecio.setText(model.getPrecio());
+        holder.txtDetalleProductoPrecio.setText(String.valueOf(formatter.format(model.getPrecio())));
 
     }
 

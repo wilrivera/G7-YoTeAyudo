@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:clickable="true"
+    android:id="@+id/container_productoDetalle"
     tools:context=".ui.ProductoDetalleFragment">
 
     <ImageView
@@ -25,11 +26,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="15dp"
         android:fontFamily="@font/varela_round"
         android:text="txtDetalleTipoModelo"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         android:visibility="visible"
@@ -42,43 +44,40 @@
         android:id="@+id/txtDetalleProductoMarca"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="40dp"
         android:fontFamily="@font/varela_round"
         android:text="Marca"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreDetalleProducto" />
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="56dp"
         android:layout_marginEnd="15dp"
         android:fontFamily="@font/varela_round"
         android:text="Precio"
-        android:textSize="20dp"
+        android:textSize="18sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/txtDetalleProductoMarca" />
+        app:layout_constraintTop_toTopOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="50dp"
         android:fontFamily="@font/varela_round"
         android:text="Tienda"
-        android:textSize="20dp"
+        android:textSize="18sp"
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDetalleProductoMarca" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerDetallePrecios"
@@ -104,17 +103,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btnFavorito"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="28dp"
         android:background="#03FFFFFF"
         android:src="@drawable/ic_baseline_favorite_border_24"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMejorPrecio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toEndOf="@+id/txtDetalleProductoMarca"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreDetalleProducto" />
+        app:layout_constraintTop_toTopOf="@+id/txtDetalleProductoMarca" />
 
     <TextView
         android:id="@+id/txtDetalleId"
@@ -126,5 +125,63 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgDetalleProducto" />
+
+    <TextView
+        android:id="@+id/txtMejorPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$$$"
+        android:textColor="#009688"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toTopOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marca: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mejor precio: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_importante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_marca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreDetalleProducto" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="S/ "
+        android:textColor="#009688"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,7 @@ package com.yoteayudo.yoteayudo.ui;
 
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -79,16 +80,30 @@ public class DetalleTiendaFragment extends Fragment {
         //TextView txtDetalleLatitud = view.findViewById(R.id.txtDetalleLatitud);
         //TextView txtDetalleLongitud = view.findViewById(R.id.txtDetalleLongitud);
         TextView txtNombreTienda = view.findViewById(R.id.txtDetalleNombre);
+        TextView txtVerMapa= view.findViewById(R.id.txtVerMapa);
 
         Glide.with(getContext()).load(imgTienda).into(imgDetalleTienda);
         //Glide.with(getContext()).load(logo).into(imgDetalleLogo);
         txtTelefono.setText(String.valueOf(telefono));
-        txtDireccion.setText(direccion + " (ver en mapa)");
+        txtDireccion.setText(direccion);
         txtDetalleHoraInicio.setText(horaInicio + " - " + horaFin);
         txtWeb.setText(web);
         //txtDetalleLatitud.setText(String.valueOf(latitud));
         //txtDetalleLongitud.setText(String.valueOf(longitud));
         txtNombreTienda.setText(nombre);
+
+        txtVerMapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AppCompatActivity activity = (AppCompatActivity) view.getContext();
+                activity.getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,
+                        new UbicacionFragment(latitud, longitud, nombre)).addToBackStack(null).commit();
+
+
+            }
+        });
+
+
 
         return view;
     }

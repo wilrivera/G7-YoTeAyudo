@@ -52,22 +52,7 @@ public class FavoritosFragment extends Fragment {
             ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Lista de favoritos");
         }
 
-        FirebaseDatabase.getInstance().getReference().child("TiendaFavoritos").child(id).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                int conteo = (int) snapshot.getChildrenCount();
-                if (conteo==0){
-                    txtFavVacio.setText("No tienes artículos en tu lista de favoritos");
-                }else{
-                    txtFavVacio.setVisibility(View.GONE);
-                }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
 
         /*LinearLayoutManager lmg = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(lmg);
@@ -87,6 +72,21 @@ public class FavoritosFragment extends Fragment {
 
         adapter = new MyAdapterFavoritos(options);
         recyclerFavoritos.setAdapter(adapter);
+
+        FirebaseDatabase.getInstance().getReference().child("TiendaFavoritos").child(id).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                int conteo = (int) snapshot.getChildrenCount();
+                if (conteo==0){
+                    txtFavVacio.setText("No tienes artículos en tu lista de favoritos");
+                }else{
+                    txtFavVacio.setVisibility(View.GONE);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
         return view;
 
     }

@@ -69,18 +69,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
 
         if (mId == R.id.nav_perfil) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new PerfilFragment()).addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new PerfilFragment()).commit();
         }if (mId == R.id.nav_buscarcomparar) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new BuscarCompararFragment()).addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new BuscarCompararFragment()).commit();
 
         }if (mId == R.id.nav_cupon) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new CuponFragment()).addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new CuponFragment()).commit();
 
         }if (mId == R.id.nav_favoritos) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new FavoritosFragment()).addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new FavoritosFragment()).commit();
 
         }if (mId == R.id.nav_compartir) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new CompartirFragment()).addToBackStack(null).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new CompartirFragment()).commit();
 
         }else if (mId == R.id.nav_cerrarsesion) {
             FirebaseAuth.getInstance().signOut();

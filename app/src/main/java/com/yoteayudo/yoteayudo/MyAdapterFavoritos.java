@@ -38,6 +38,7 @@ public class MyAdapterFavoritos extends FirebaseRecyclerAdapter<MyModelFavoritos
             @Override
             public void onClick(View view) {
                 FirebaseDatabase.getInstance().getReference().child("TiendaFavoritos").child(id).child(getRef(position).getKey()).removeValue();
+
             }
         });
     }

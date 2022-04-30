@@ -117,7 +117,7 @@ public class ProductoDetalleFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
-                            Snackbar.make(getView().findViewById(R.id.frame), "Se añadió a favoritos", Snackbar.LENGTH_SHORT).show();
+                            Snackbar.make(getView().findViewById(R.id.container_productoDetalle), "Se añadió a favoritos", Snackbar.LENGTH_SHORT).show();
                         } else {
                             Snackbar.make(getView().findViewById(R.id.container_productoDetalle), "No se pudo añadir a favoritos", Snackbar.LENGTH_SHORT).show();
                         }

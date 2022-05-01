@@ -1,5 +1,7 @@
 package com.yoteayudo.yoteayudo.ui;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -103,8 +105,21 @@ public class DetalleTiendaFragment extends Fragment {
             }
         });
 
+        txtWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToUrl("https://" + web);
+            }
+        });
+
 
 
         return view;
+    }
+
+    private void goToUrl(String s){
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+
     }
 }

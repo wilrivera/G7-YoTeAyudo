@@ -21,15 +21,17 @@
 
     <TextView
         android:id="@+id/txtDetalleNombre"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="10dp"
         android:fontFamily="@font/varela_round"
         android:text="Nombre_Tienda"
-        android:textSize="50sp"
+        android:textAlignment="center"
+        android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgDetalleTienda" />
 
@@ -38,7 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:src="@android:drawable/stat_sys_phone_call"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDetalleNombre"

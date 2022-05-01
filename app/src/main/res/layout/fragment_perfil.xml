@@ -12,7 +12,7 @@
     <TextView
         android:id="@+id/txtNombreUsuario"
         android:layout_width="match_parent"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="56dp"
         android:layout_marginEnd="10dp"
@@ -49,13 +49,13 @@
 
         <TextView
             android:id="@+id/txtSubirFoto"
-            android:layout_width="129dp"
-            android:layout_height="22dp"
+            android:layout_width="186dp"
+            android:layout_height="19dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="7dp"
             android:fontFamily="@font/varela_round"
             android:text="Subir foto de perfil"
-            android:textAlignment="center"
+            android:textAlignment="textStart"
             android:textStyle="italic"
             app:layout_constraintStart_toEndOf="@+id/icCamara"
             app:layout_constraintTop_toBottomOf="@+id/imgFotoPerfil" />
@@ -75,7 +75,7 @@
     <TextView
         android:id="@+id/txtCorreo"
         android:layout_width="match_parent"
-        android:layout_height="27dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"

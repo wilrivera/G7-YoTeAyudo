@@ -25,12 +25,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="5dp"
-        android:fontFamily="@font/varela_round"
+        android:fontFamily="@font/poppins"
         android:text="Nombre_tienda"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgTiendasLogo"
         app:layout_constraintEnd_toStartOf="@+id/imgTiendasNext"
         app:layout_constraintStart_toEndOf="@+id/imgTiendasLogo"
         app:layout_constraintTop_toTopOf="@+id/imgTiendasLogo" />
@@ -38,7 +38,7 @@
     <ImageButton
         android:id="@+id/imgTiendasNext"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:background="#03FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

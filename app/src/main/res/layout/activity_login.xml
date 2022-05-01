@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/varela_round"
+        android:fontFamily="@font/poppins"
         android:text="YoTeAyudo"
         android:textAlignment="center"
         android:textSize="45dp" />
@@ -46,7 +46,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/varela_round"
+        android:fontFamily="@font/poppins_light_italic"
         android:text="Planea y ahorra en tu siguiente compra"
         android:textAlignment="center"
         android:textStyle="italic" />
@@ -60,6 +60,7 @@
         android:drawableLeft="@drawable/ic_mail"
         android:drawablePadding="10dp"
         android:ems="10"
+        android:fontFamily="@font/poppins"
         android:hint="Correo electrónico"
         android:inputType="textEmailAddress" />
 
@@ -72,6 +73,7 @@
         android:drawableLeft="@drawable/ic_candado"
         android:drawablePadding="10dp"
         android:ems="10"
+        android:fontFamily="@font/poppins"
         android:hint="Contraseña"
         android:inputType="textPassword" />
 
@@ -81,7 +83,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Ingresar"/>
+        android:fontFamily="@font/poppins"
+        android:text="Ingresar" />
         <!--android:onClick="ingresar"
         />-->
 
@@ -91,7 +94,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp"
-        android:text="Crear cuenta"/><!--
+        android:fontFamily="@font/poppins"
+        android:text="Crear cuenta" /><!--
         android:onClick="registrar"
 
         />-->

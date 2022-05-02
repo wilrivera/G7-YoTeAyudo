@@ -11,6 +11,7 @@ import com.yoteayudo.yoteayudo.ui.BuscarCompararFragment;
 import com.yoteayudo.yoteayudo.ui.CompartirFragment;
 import com.yoteayudo.yoteayudo.ui.CuponFragment;
 import com.yoteayudo.yoteayudo.ui.FavoritosFragment;
+import com.yoteayudo.yoteayudo.ui.OficinasFragment;
 import com.yoteayudo.yoteayudo.ui.PerfilFragment;
 
 import androidx.annotation.NonNull;
@@ -89,5 +90,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         drawer.closeDrawers();
         return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int mId = item.getItemId();
+
+        if (mId == R.id.action_oficinas) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main, new OficinasFragment()).commit();
+        }
+
+        return super.onOptionsItemSelected(item);
+
     }
 }

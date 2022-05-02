@@ -63,7 +63,7 @@
         android:imeOptions="actionNext"
         android:inputType="textPersonName"
         android:padding="16dp"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/etRegistrarCorreo"
@@ -78,7 +78,7 @@
         android:hint="@string/text_email"
         android:inputType="textEmailAddress"
         android:padding="16dp"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/etRegistrarPassword"
@@ -93,7 +93,7 @@
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:padding="16dp"
-        android:textSize="16sp" />
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/btnRegistrarCrearCuenta"
@@ -102,7 +102,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/poppins"
-        android:text="Crear Cuenta" />
+        android:text="Crear Cuenta"
+        android:textSize="14sp" />
 
     <Button
         android:id="@+id/btnRegistrarYatienesCuenta"
@@ -110,7 +111,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/poppins"
-        android:text="¿Ya tienes una cuenta? Identifícate" />
+        android:text="¿Ya tienes una cuenta? Identifícate"
+        android:textSize="14sp" />
         <!--android:onClick="IrLogin"
         />-->
 

@@ -1,10 +1,12 @@
 package com.yoteayudo.yoteayudo.ui;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -16,6 +18,8 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,16 +28,22 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.yoteayudo.yoteayudo.R;
 
-public class OficinasFragment extends Fragment {
+import java.util.ArrayList;
+import java.util.List;
+
+public class OficinasFragment extends Fragment implements OnMapReadyCallback{
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String mParam1;
     private String mParam2;
+
     DatabaseReference mDatabase;
-    SupportMapFragment mapFragment;
     Double latitud1, longitud1, latitud2, longitud2, latitud3, longitud3;
+    List<Marker> listaMarcadores = new ArrayList<>();
+    GoogleMap mMap;
+
 
     public OficinasFragment() {
 
@@ -62,12 +72,29 @@ public class OficinasFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_oficinas, container, false);
+        // TextView textView11 = view.findViewById(R.id.textView11);
 
-        Toolbar actionBar= (Toolbar) view.findViewById(R.id.app_bar_main);
-        if(((AppCompatActivity)getActivity()).getSupportActionBar() != null){
-            ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle("Nuestras oficinas");
+        return view;
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map2);
+        if (mapFragment != null) {
+            mapFragment.getMapAsync(this);
         }
+    }
 
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        mMap = googleMap;
+        setupUI();
+        myInterfaz();
+
+    }
+
+    private void myInterfaz() {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase.child("Oficinas").addValueEventListener(new ValueEventListener() {
             @Override
@@ -80,52 +107,54 @@ public class OficinasFragment extends Fragment {
 
                 latitud3 = (Double) snapshot.child("oficina3").child("latitud").getValue();
                 longitud3 = (Double) snapshot.child("oficina3").child("longitud").getValue();
-                SupportMapFragment supportMapFragment = (SupportMapFragment)
-                        getChildFragmentManager().findFragmentById(R.id.map2);
 
-                supportMapFragment.getMapAsync(new OnMapReadyCallback() {
-                    @Override
-                    public void onMapReady(GoogleMap googleMap) {
-                        googleMap.getUiSettings().setZoomControlsEnabled(true);
-                        googleMap.setTrafficEnabled(true);
+                LatLng sucursal1 = new LatLng(latitud1, longitud1);
+                LatLng sucursal2 = new LatLng(latitud2, longitud2);
+                LatLng sucursal3 = new LatLng(latitud3, longitud3);
 
-                        googleMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(latitud1, longitud1)).title("Oficina1"));
+                MarkerOptions markerOptions1 = new MarkerOptions();
+                MarkerOptions markerOptions2 = new MarkerOptions();
+                MarkerOptions markerOptions3 = new MarkerOptions();
 
-                        googleMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(latitud2, longitud2)).title("Oficina 2"));
+                markerOptions1.position(sucursal1)
+                        .title("oficina 1");
+                markerOptions2.position(sucursal2)
+                        .title("oficina 2");
+                markerOptions3.position(sucursal3)
+                        .title("oficina 3");
 
-                        googleMap.addMarker(new MarkerOptions()
-                                .position(new LatLng(latitud3, longitud3)).title("Oficina 3"));
+                Marker marker1 = mMap.addMarker(markerOptions1);
+                Marker marker2 = mMap.addMarker(markerOptions2);
+                Marker marker3= mMap.addMarker(markerOptions3);
 
-                        googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitud1, longitud1), 15));
-                        googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
-                            @Override
-                            public void onMapClick(LatLng latLng) {
-                                // When clicked on map
-                                // Initialize marker options
-                                MarkerOptions markerOptions = new MarkerOptions();
-                                // Set position of marker
-                                markerOptions.position(latLng);
-                                // Set title of marker
-                                markerOptions.title(latLng.latitude + " : " + latLng.longitude);
-                                // Remove all
-                                googleMap.clear();
-                                // Animating to zoom the marker
-                                googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
-                                // Add marker on map
-                                googleMap.addMarker(markerOptions);
-                            }
-                        });
-                    }
-                });
+                listaMarcadores.add(marker1);
+                listaMarcadores.add(marker2);
+                listaMarcadores.add(marker3);
+
+                centrarMarcadores(listaMarcadores);
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
 
+    }
 
-        return view;
+    private void centrarMarcadores(List<Marker> listaMarcadores) {
+        LatLngBounds.Builder builder = new LatLngBounds.Builder();
+        for (Marker marker : listaMarcadores) {
+            builder.include(marker.getPosition());
+        }
+        mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(builder.build(), 150));
+    }
+    private void setupUI() {
+
+        if (ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(requireContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
     }
 }
